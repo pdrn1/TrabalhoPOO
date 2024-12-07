@@ -1,11 +1,11 @@
 public class FuncionarioGov extends Usuario{
     private String nome;
-    private int cpf;
+    private String cpf;
     private String email;
     private String cargo;
 
     //construtor
-    public FuncionarioGov(String nome, int cpf, String email, String cargo){
+    public FuncionarioGov(String nome, String cpf, String email, String cargo){
         super(nome, cpf, email);
         this.cargo = cargo;
     }

@@ -57,7 +57,7 @@ public class Main {
         System.out.print("Email: ");
         String email = entrada.nextLine();
         System.out.print("CPF: ");
-        int cpf = Integer.parseInt(entrada.nextLine());
+        String cpf = entrada.nextLine();
         System.out.print("Cargo: ");
         String cargo = entrada.nextLine();
 
@@ -76,7 +76,7 @@ public class Main {
         System.out.print("Email: ");
         String email = entrada.nextLine();
         System.out.print("CPF: ");
-        int cpf = Integer.parseInt(entrada.nextLine());
+        String cpf = entrada.nextLine();
 
         Usuario usuario = new Usuario(nome, cpf, email);
         contas.put(login.getUsuario(), login);
@@ -173,7 +173,7 @@ public class Main {
     private static void registrarProblema(Scanner entrada, String usuario) {
         System.out.print("Descreva o problema: ");
         String descricao = entrada.nextLine();
-        Problema problema = new Problema(descricao, new Usuario(usuario, 0, "N/A"));
+        Problema problema = new Problema(descricao, new Usuario(usuario, "0", "N/A"));
         listaProblemas.add(problema);
         System.out.println("Problema registrado com sucesso!");
     }

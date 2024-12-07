@@ -1,10 +1,10 @@
 public class Usuario {
     private String nome;
-    private int cpf;
+    private String cpf;
     private String email;
 
     // construtor
-    public Usuario(String nome, int cpf, String email){
+    public Usuario(String nome, String cpf, String email){
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
@@ -14,7 +14,7 @@ public class Usuario {
     public String getNome(){
         return nome;
     }
-    public int getCpf(){
+    public String getCpf(){
         return cpf;
     }
     public String getEmail() {
