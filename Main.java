@@ -60,6 +60,7 @@ public class Main {
         String cpf = entrada.nextLine();
         System.out.print("Cargo: ");
         String cargo = entrada.nextLine();
+        login.setTipo("Funcionario");
 
         FuncionarioGov funcionario = new FuncionarioGov(nome, cpf, email, cargo);
         contas.put(login.getUsuario(), login);
@@ -77,6 +78,7 @@ public class Main {
         String email = entrada.nextLine();
         System.out.print("CPF: ");
         String cpf = entrada.nextLine();
+        login.setTipo("Usuario");
 
         Usuario usuario = new Usuario(nome, cpf, email);
         contas.put(login.getUsuario(), login);
@@ -106,7 +108,7 @@ public class Main {
 
         if (login != null && login.verificarLogin(usuario, senha)) {
             System.out.println("Login realizado com sucesso!");
-            if (usuario.startsWith("func")) {
+            if (login.getTipo().compareTo("Funcionario") == 0) {
                 menuFuncionario(entrada, usuario);
             } else {
                 menuUsuario(entrada, usuario);

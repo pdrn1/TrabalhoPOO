@@ -1,10 +1,12 @@
 public class SistemaLogin {
     private String usuario;
     private String senha;
+    private String tipo;
 
     public void registraConta(String usuario, String senha) {
         this.usuario = usuario;
         this.senha = senha;
+        this.tipo = tipo;
         System.out.println("Conta registrada com sucesso!");
     }
 
@@ -14,6 +16,13 @@ public class SistemaLogin {
 
     public String getUsuario() {
         return usuario;
+    }
+
+    public String getTipo(){
+        return tipo;
+    }
+    public void setTipo(String tipo){
+        this.tipo = tipo;
     }
 
     @Override
